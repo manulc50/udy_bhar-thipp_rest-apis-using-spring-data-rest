@@ -1,0 +1,63 @@
+1) Create Organizer:
+
+URL:
+
+http://localhost:8080/eventmanagement-api/organizers
+
+POST Request Body:
+
+{
+  "name" : "Bharath Thippireddy"
+}
+
+2) Create Venue:
+
+URL:
+
+http://localhost:8080/eventmanagement-api/venues
+
+POST Request Body:
+
+{
+  "name" : "Bharaths Consulting and Training INC",
+  "streetAddress" : "12345",
+  "streetAddress2" : "Spice Wood Springs",
+  "city" : "Austin",
+  "state" : "Texas",
+  "country" : "United States",
+  "postalCode" : "78750"
+}
+
+3) Create Event:
+
+URL:
+
+http://localhost:8080/eventmanagement-api/events
+
+POST Request Body:
+
+{
+  "name" : "Spring Data Rest Training",
+  "desc": "The Best Course Ever",
+  "startTime" : "2017-08-29T14:46:18Z",
+  "endTime" : "2017-08-29T16:46:18Z",
+  "zoneId" : "US/Central",
+  "organizer" : "/organizers/1",
+  "venue" : "/venues/1"
+}
+
+
+4) Create Particpant:
+
+URL:
+
+http://localhost:8080/eventmanagement-api/participants
+
+POST Request Body:
+
+{
+  "name" : "John ",
+  "email" : "johnf@gmail.com",
+  "event" : "/events/1",
+  "checkedIn":"false"
+}
